@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "AmazonPriceDropNotifier",
+    "version": "1.0.0",
+    "content_scripts": 
+    [
+      {
+        "matches": ["<all_urls>"],
+        "js" : ["content.js"]
+      }
+    ],
+    "background":
+    {
+      "persistent": true,
+      "scripts": ["jquery-3.6.0.js","firebase-app.js","firebase-auth.js","background.js"]
+    },
+    "description": "Does stuff with the background.",
+    "icons": {
+      "128": "icon128.png",
+      "48": "amazon2.png",
+      "16": "amazon.png"
+    },
+    "browser_action": {
+      "default_icon": "amazon.png",
+      "default_popup": "index.html"
+    },
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+    "permissions": ["tabs", "activeTab"]
+  }
