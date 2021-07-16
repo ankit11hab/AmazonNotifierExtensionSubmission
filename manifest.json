@@ -12,7 +12,7 @@
     "background":
     {
       "persistent": true,
-      "scripts": ["packages/jquery-3.6.0.js","firebase-app.js","firebase-auth.js","background.js"]
+      "scripts": ["packages/jquery-3.6.0.js","packages/firebase-app.js","packages/firebase-auth.js","background.js"]
     },
     "description": "Does stuff with the background.",
     "icons": {
