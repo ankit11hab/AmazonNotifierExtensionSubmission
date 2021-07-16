@@ -34,8 +34,6 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                 chrome.browserAction.setPopup({
                     popup:"home.html"
                  });
-
-                 //document.getElementById('details').innerHTML = localStorage.getItem("emaildata");
                 //is signed in
             } else {
 
@@ -67,11 +65,6 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
             if (user) {
                 var email = user.email;
-                
-                document.getElementById('details').innerHTML = localStorage.getItem("emaildata");
-        
-                //module.exports.emaildata = email.value;
-        
             } else {
         
                 //alert("No Active User");
