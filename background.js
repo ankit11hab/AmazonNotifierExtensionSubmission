@@ -12,7 +12,10 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             appId: "1:202456878284:web:960d333a59ac53af8c0669",
             measurementId: "G-F6XKG1WBS5"
         };
-        firebase.initializeApp(config);
+        if (firebase.apps.length === 0) {
+            firebase.initializeApp(config);
+        }
+        //firebase.initializeApp(config);
         const auth = firebase.auth();
         function signIn() {
             const promise = auth.signInWithEmailAndPassword(msg.email, msg.password);
@@ -114,7 +117,9 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             appId: "1:202456878284:web:960d333a59ac53af8c0669",
             measurementId: "G-F6XKG1WBS5"
         };
-        firebase.initializeApp(config);
+        if (firebase.apps.length === 0) {
+            firebase.initializeApp(config);
+        }
         const auth = firebase.auth();
 
         function signUp() {

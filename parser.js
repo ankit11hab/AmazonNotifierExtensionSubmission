@@ -22,8 +22,8 @@ const minPrice = 50; */
 async function checkPrice(url, minPrice, emaildata) {
   try {
     const priceString = await nightmare.goto(url)
-      .wait("#priceblock_saleprice")
-      .evaluate(() => document.getElementById("priceblock_saleprice").innerText)
+      .wait("#priceblock_ourprice")
+      .evaluate(() => document.getElementById("priceblock_ourprice").innerText)
       .end()
     const priceNumber = parseFloat(priceString.replace('$', ''))
     if (priceNumber < minPrice) {
